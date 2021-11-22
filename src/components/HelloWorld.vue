@@ -13,19 +13,16 @@ export default {
       helloMessage: ''
     }  
   },
-  props: {
+   props: {
     msg: String
-  },
+  },  
   mounted() { //returning a promise
     this.$hello_api.getHelloMessage().then( resp => {
       this.helloMessage = resp.message
-    }) 
-    
+    })     
   }
 }
-
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
